@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
 import { contact } from '../data/content';
+import useTextScramble from '../hooks/useTextScramble';
+import ParticleNetwork from './effects/ParticleNetwork';
 
 export default function Hero() {
+  const { displayText, isComplete } = useTextScramble('Matthew Rahm');
+
   const scrollToProjects = () => {
     document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -11,46 +15,51 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-20">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20">
+      <ParticleNetwork />
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-center max-w-3xl"
+        className="relative z-10 text-center max-w-3xl"
       >
-        {/* Status badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#10b981]/30 bg-[#10b981]/10 mb-8"
-        >
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10b981] opacity-75" />
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#10b981]" />
-          </span>
-          <span className="text-xs font-medium text-[#34d399] uppercase tracking-wider">
-            Available for new opportunities
-          </span>
-        </motion.div>
-
         {/* Headline */}
-        <h1 className="text-5xl md:text-7xl font-bold text-[#fafafa] mb-4 text-glow">
-          Matthew Rahm
+        <h1
+          className={`text-5xl md:text-7xl font-bold text-[#fafafa] mb-4 transition-all duration-500 ${
+            isComplete ? 'font-sans text-glow' : 'font-mono'
+          }`}
+        >
+          {displayText}
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-[#888888] mb-4">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="text-xl md:text-2xl text-[#888888] mb-4"
+        >
           <span className="text-[#10b981]">Full-Stack</span> Engineer
-        </p>
+        </motion.p>
 
         {/* Tagline */}
-        <p className="text-lg text-[#666666] mb-10">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="text-lg text-[#666666] mb-10"
+        >
           Building products that scale.
-        </p>
+        </motion.p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+        >
           <motion.button
             onClick={scrollToProjects}
             whileHover={{ scale: 1.03 }}
@@ -70,10 +79,15 @@ export default function Hero() {
           >
             Get in touch
           </motion.button>
-        </div>
+        </motion.div>
 
         {/* Social icons */}
-        <div className="flex flex-col items-center gap-3">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.0 }}
+          className="flex flex-col items-center gap-3"
+        >
           <span className="text-xs font-medium text-[#666666] uppercase tracking-widest">
             Connect with me
           </span>
@@ -110,7 +124,7 @@ export default function Hero() {
               </svg>
             </a>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );

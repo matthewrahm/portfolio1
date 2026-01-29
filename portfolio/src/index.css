@@ -277,7 +277,8 @@ body {
   .aurora,
   .timeline-progress,
   .scroll-progress,
-  .parallax-text {
+  .parallax-text,
+  .particle-canvas {
     animation: none !important;
     transition: none !important;
   }
