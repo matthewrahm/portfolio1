@@ -179,6 +179,41 @@ body {
   box-shadow: 0 0 20px rgba(16, 185, 129, 0.15), 0 2px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Animated gradient border for project cards */
+@property --border-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.gradient-border {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 30%,
+    #10b981 45%,
+    #34d399 55%,
+    transparent 70%
+  );
+  animation: gradient-rotate 3s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.group:hover .gradient-border {
+  opacity: 1;
+}
+
+@keyframes gradient-rotate {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
 /* Animated dot grid background */
 .dot-grid {
   position: fixed;
@@ -278,7 +313,8 @@ body {
   .timeline-progress,
   .scroll-progress,
   .parallax-text,
-  .particle-canvas {
+  .particle-canvas,
+  .gradient-border {
     animation: none !important;
     transition: none !important;
   }

@@ -50,43 +50,27 @@ export const experience = [
 export const projects = [
   {
     name: "Token Launch Platform",
-    description: "Production-ready website builder for Solana token launches",
-    impact: "75+ sites deployed, multi-million dollar market caps",
+    description: "Production-ready website builder enabling rapid Solana token launches with custom branding, real-time analytics, and automated deployment pipelines.",
+    impact: "75+ sites deployed — multi-million dollar market caps generated",
     tags: ["React", "Node.js", "Solana Web3.js", "AWS"],
     category: "Web3",
-    liveUrl: "#",
-    githubUrl: "#"
+    featured: true,
   },
   {
-    name: "Web3 Product Suite",
-    description: "Revenue-generating Web3 tools and dashboards",
-    impact: "Led architecture and full-stack development",
-    tags: ["React", "TypeScript", "Solana RPCs", "WebSockets"],
+    name: "Crypto Tracking Platform",
+    description: "Real-time cryptocurrency tracking platform with optimized API data fetching, automated server management via PM2 and shell scripts, and a high-performance Vite build pipeline with NGINX reverse proxy.",
+    impact: "Full CI/CD pipeline with automated failover recovery on AWS",
+    tags: ["React", "Node.js", "Express", "WebSocket", "AWS", "Vite"],
     category: "Full Stack",
-    liveUrl: "#",
-    githubUrl: "#"
   },
   {
-    name: "On-chain Analytics Dashboard",
-    description: "Real-time blockchain data visualization",
-    impact: "Live monitoring of Solana network data",
-    tags: ["React", "GraphQL", "Solana RPC"],
-    category: "Web3",
-    liveUrl: "#",
-    githubUrl: "#"
+    name: "Voice Journaling App",
+    description: "iOS voice journaling app with AI-powered personalized daily prompts. Integrates OpenAI GPT to analyze user input contextually and generate tailored reflection questions.",
+    impact: "Full-stack Swift + Firebase architecture with modular design",
+    tags: ["Swift", "TypeScript", "Firebase", "GraphQL", "ChatGPT API"],
+    category: "Mobile / AI",
   },
-  {
-    name: "eCommerce Platform",
-    description: "Full-stack eCommerce site with payments and inventory management",
-    impact: "End-to-end product from design to deployment",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    category: "Full Stack",
-    liveUrl: "#",
-    githubUrl: "#"
-  }
 ];
-
-export const projectCategories = ["All", "Full Stack", "Web3", "Frontend", "Backend"];
 
 export const skills = {
   languages: ["JavaScript", "TypeScript", "Python", "C++", "SQL", "Swift"],
