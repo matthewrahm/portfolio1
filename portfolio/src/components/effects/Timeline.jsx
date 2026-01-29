@@ -72,7 +72,7 @@ function TimelineYearMarker({ year, index, total, progress }) {
 
   return (
     <motion.div
-      className="absolute left-0 -translate-x-1/2 flex items-center"
+      className="absolute left-0 -translate-x-[10px] flex items-center"
       style={{ top: topPosition }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
