@@ -55,6 +55,11 @@ export const projects = [
     tags: ["React", "Node.js", "Solana Web3.js", "AWS"],
     category: "Web3",
     featured: true,
+    highlights: [
+      "Templated builder with live preview and one-click deploy",
+      "Real-time analytics dashboard tracking on-chain activity",
+      "Automated CI/CD pipeline via AWS with zero-downtime deploys"
+    ],
   },
   {
     name: "Crypto Tracking Platform",
@@ -62,6 +67,11 @@ export const projects = [
     impact: "Full CI/CD pipeline with automated failover recovery on AWS",
     tags: ["React", "Node.js", "Express", "WebSocket", "AWS", "Vite"],
     category: "Full Stack",
+    highlights: [
+      "WebSocket-driven live price feeds with sub-second updates",
+      "PM2 process management with automated failover scripts",
+      "NGINX reverse proxy with SSL and optimized caching"
+    ],
   },
   {
     name: "Voice Journaling App",
@@ -69,6 +79,11 @@ export const projects = [
     impact: "Full-stack Swift + Firebase architecture with modular design",
     tags: ["Swift", "TypeScript", "Firebase", "GraphQL", "ChatGPT API"],
     category: "Mobile / AI",
+    highlights: [
+      "Speech-to-text transcription with contextual AI analysis",
+      "GPT-powered prompt engine adapting to journal history",
+      "Modular Swift architecture with Firebase real-time sync"
+    ],
   },
 ];
 

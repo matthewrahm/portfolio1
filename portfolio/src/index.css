@@ -116,11 +116,13 @@ body {
 }
 
 .glass-card:hover {
-  border-color: rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.25);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
     0 8px 32px rgba(0, 0, 0, 0.4),
-    0 0 30px rgba(16, 185, 129, 0.08);
+    0 0 20px rgba(16, 185, 129, 0.15),
+    0 0 40px rgba(16, 185, 129, 0.08);
+  transform: translateY(-4px);
 }
 
 /* Glass navbar */
@@ -177,41 +179,6 @@ body {
   background: rgba(22, 22, 30, 0.7);
   border-color: rgba(16, 185, 129, 0.3);
   box-shadow: 0 0 20px rgba(16, 185, 129, 0.15), 0 2px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Animated gradient border for project cards */
-@property --border-angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
-}
-
-.gradient-border {
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: conic-gradient(
-    from var(--border-angle),
-    transparent 30%,
-    #10b981 45%,
-    #34d399 55%,
-    transparent 70%
-  );
-  animation: gradient-rotate 3s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.group:hover .gradient-border {
-  opacity: 1;
-}
-
-@keyframes gradient-rotate {
-  to {
-    --border-angle: 360deg;
-  }
 }
 
 /* Animated dot grid background */
@@ -313,8 +280,7 @@ body {
   .timeline-progress,
   .scroll-progress,
   .parallax-text,
-  .particle-canvas,
-  .gradient-border {
+  .particle-canvas {
     animation: none !important;
     transition: none !important;
   }

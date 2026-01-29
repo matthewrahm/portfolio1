@@ -49,7 +49,7 @@ export default function Timeline({ children, items }) {
       </div>
 
       {/* Timeline items */}
-      <div className="pl-8 md:pl-20 space-y-8">
+      <div className="pl-8 md:pl-20 space-y-12">
         {children}
       </div>
     </div>
@@ -79,7 +79,7 @@ function TimelineYearMarker({ year, index, total, progress }) {
       transition={{ delay: index * 0.1 }}
     >
       <motion.div
-        className={`w-4 h-4 rounded-full border-2 transition-all duration-300 ${
+        className={`w-5 h-5 rounded-full border-2 transition-all duration-300 ${
           isActive
             ? 'bg-gradient-to-br from-[#10b981] to-[#34d399] border-transparent'
             : 'bg-[#0a0a0f] border-[#404040]'
@@ -93,7 +93,7 @@ function TimelineYearMarker({ year, index, total, progress }) {
       />
 
       <span
-        className={`ml-4 text-sm font-mono transition-colors duration-300 ${
+        className={`ml-6 text-base font-mono transition-colors duration-300 ${
           isActive ? 'text-[#fafafa]' : 'text-[#666666]'
         }`}
       >

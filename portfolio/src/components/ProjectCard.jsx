@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export default function ProjectCard({ name, description, impact, tags, category, featured, index }) {
+export default function ProjectCard({ name, description, impact, highlights, tags, category, featured, index }) {
   return (
     <motion.div
       layout
@@ -10,9 +10,6 @@ export default function ProjectCard({ name, description, impact, tags, category,
       transition={{ duration: 0.4, delay: index * 0.1 }}
       className={`group relative rounded-xl ${featured ? 'md:row-span-2' : ''}`}
     >
-      {/* Animated gradient border */}
-      <div className="gradient-border rounded-xl" />
-
       {/* Card content */}
       <div className={`relative glass-card rounded-xl p-6 h-full flex flex-col
         ${featured ? 'md:p-8' : ''}`}
@@ -30,6 +27,17 @@ export default function ProjectCard({ name, description, impact, tags, category,
         </h3>
         <p className="text-[#888888] mb-2">{description}</p>
         <p className="text-sm text-[#666666] mb-4">{impact}</p>
+
+        {highlights && highlights.length > 0 && (
+          <ul className="space-y-1.5 mb-4 text-sm text-[#888888]">
+            {highlights.map((item, i) => (
+              <li key={i} className="flex items-start gap-2">
+                <span className="text-[#10b981] mt-0.5 shrink-0">&#8226;</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        )}
 
         {/* Tags pushed to bottom */}
         <div className="flex flex-wrap gap-2 mt-auto">
