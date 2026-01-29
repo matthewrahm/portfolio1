@@ -97,13 +97,13 @@ export const skills = {
 };
 
 export const about = {
-  bio: "Full-stack engineer passionate about building scalable products. Currently studying at BYU while working on Web3 projects. Based between Atlanta and Provo.",
+  bio: "Full-stack engineer passionate about building scalable products. Currently studying at BYU while working on Web3 projects. Based between GA and UT.",
   school: "BYU '27"
 };
 
 export const contact = {
   email: "matthewdrahm@gmail.com",
-  location: "Alpharetta, GA / Provo, UT",
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername"
+  location: "GA / UT",
+  github: "https://github.com/matthewrahm",
+  linkedin: "https://www.linkedin.com/in/matthew-rahm-4ab000348/"
 };
