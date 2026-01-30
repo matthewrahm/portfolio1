@@ -74,6 +74,20 @@ export const projects = [
     ],
   },
   {
+    name: "Ramen Crypto Paper Trading Platform",
+    description: "Full-featured paper trading simulator with $100K virtual balance, real-time Binance WebSocket price feeds, and professional TradingView-style charting. Includes technical indicators, DCA backtesting, market sentiment tracking, and a gamified progression system.",
+    impact: "Live platform with real-time data across BTC, ETH, and SOL",
+    tags: ["React", "Supabase", "Zustand", "Lightweight Charts", "WebSocket", "Binance API"],
+    category: "Full Stack",
+    featured: true,
+    highlights: [
+      "Paper trading engine with live portfolio P&L, position tracking, and what-if scenarios",
+      "Real-time WebSocket price feeds with candlestick charts and RSI/MACD/Bollinger Band indicators",
+      "DCA backtesting simulator and multi-asset percentage-normalized comparison charts",
+      "Supabase auth with OAuth, gamified XP/streak system, and Fear & Greed sentiment dashboard"
+    ],
+  },
+  {
     name: "Voice Journaling App",
     description: "iOS voice journaling app with AI-powered personalized daily prompts. Integrates OpenAI GPT to analyze user input contextually and generate tailored reflection questions.",
     impact: "Full-stack Swift + Firebase architecture with modular design",
