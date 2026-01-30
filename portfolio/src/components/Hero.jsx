@@ -27,7 +27,7 @@ export default function Hero() {
         {/* Headline */}
         <h1
           className={`text-5xl md:text-7xl font-bold text-[#fafafa] mb-4 transition-all duration-500 ${
-            isComplete ? 'font-sans text-glow' : 'font-mono'
+            isComplete ? 'font-mono text-glow' : 'font-mono'
           }`}
         >
           {displayText}

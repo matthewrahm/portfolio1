@@ -36,7 +36,7 @@ export default function Timeline({ children, items }) {
       />
 
       {/* Year markers */}
-      <div className="absolute left-0 md:left-8 top-0 bottom-0 -translate-x-1/2">
+      <div className="absolute left-0 md:left-8 top-0 bottom-0 -translate-x-1/2 z-20">
         {years.map((year, index) => (
           <TimelineYearMarker
             key={year}
