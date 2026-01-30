@@ -1,11 +1,13 @@
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useRef, useState } from 'react';
+import { motion, useInView, LayoutGroup } from 'framer-motion';
 import { projects } from '../data/content';
 import ProjectCard from './ProjectCard';
+import ProjectShowcase from './ProjectShowcase';
 
 export default function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const [selectedProject, setSelectedProject] = useState(null);
 
   return (
     <section id="projects" className="py-24 px-6">
@@ -25,11 +27,24 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
-          {projects.map((project, index) => (
-            <ProjectCard key={project.name} {...project} index={index} />
-          ))}
-        </div>
+        <LayoutGroup>
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={project.name}
+                {...project}
+                index={index}
+                hasShowcase={!!project.showcase}
+                onClick={() => setSelectedProject(project)}
+              />
+            ))}
+          </div>
+
+          <ProjectShowcase
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
+        </LayoutGroup>
       </div>
     </section>
   );

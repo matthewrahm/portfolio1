@@ -1,15 +1,39 @@
 import { motion } from 'framer-motion';
 
-export default function ProjectCard({ name, description, impact, highlights, tags, category, featured, link, index }) {
+export default function ProjectCard({ name, description, impact, highlights, tags, category, featured, link, index, onClick, hasShowcase }) {
+  const handleKeyDown = (e) => {
+    if (hasShowcase && (e.key === 'Enter' || e.key === ' ')) {
+      e.preventDefault();
+      onClick?.();
+    }
+  };
+
   return (
     <motion.div
       layout
+      layoutId={`project-${name}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className={`group relative rounded-xl ${featured ? 'md:row-span-2' : ''}`}
+      className={`group relative rounded-xl ${featured ? 'md:row-span-2' : ''} ${hasShowcase ? 'cursor-pointer' : ''}`}
+      onClick={hasShowcase ? onClick : undefined}
+      onKeyDown={hasShowcase ? handleKeyDown : undefined}
+      role={hasShowcase ? 'button' : undefined}
+      tabIndex={hasShowcase ? 0 : undefined}
+      aria-label={hasShowcase ? `View ${name} showcase` : undefined}
     >
+      {/* Expand icon for showcase cards */}
+      {hasShowcase && (
+        <div className="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          <div className="w-7 h-7 rounded-md glass-card flex items-center justify-center text-[#888] group-hover:text-[#10b981]">
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+            </svg>
+          </div>
+        </div>
+      )}
+
       {/* Card content */}
       <div className={`relative glass-card rounded-xl p-6 h-full flex flex-col
         ${featured ? 'md:p-8' : ''}`}
@@ -54,6 +78,7 @@ export default function ProjectCard({ name, description, impact, highlights, tag
               href={link}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
               className="ml-auto inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-[#10b981] hover:text-[#34d399] transition-colors"
             >
               Live Demo

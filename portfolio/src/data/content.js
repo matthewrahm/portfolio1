@@ -60,6 +60,24 @@ export const projects = [
       "Real-time analytics dashboard tracking on-chain activity",
       "Automated CI/CD pipeline via AWS with zero-downtime deploys"
     ],
+    showcase: {
+      screenshots: [
+        { src: "/screenshots/250_1.png", alt: "250 Token US state map showing community presence", caption: "Interactive US Map — Community presence tracker" },
+        { src: "/screenshots/250_2.png", alt: "250 Token market cap roadmap with milestones", caption: "Market Cap Roadmap — Milestone-driven timeline" },
+        { src: "/screenshots/250_3.png", alt: "250 Token fee sharing revenue split dashboard", caption: "Fee Sharing — Revenue split dashboard" },
+        { src: "/screenshots/btc09.png", alt: "BTC09 retro pixel-art Bitcoin launch page", caption: "BTC09 — Retro pixel-art launch page with live stats" },
+        { src: "/screenshots/PHOF.png", alt: "Pumpfun Hall of Fame curated livestream moments", caption: "Pumpfun Hall of Fame — Curated livestream moments" },
+      ],
+      detailedDescription: "Complete website builder for custom-branded Solana token launch sites. Each site ships with interactive community maps, market cap roadmaps, fee sharing dashboards, and real-time on-chain data — all deployed to AWS with a single click.",
+      keyFeatures: [
+        "Custom branding with live preview",
+        "Interactive community maps",
+        "Market cap roadmaps",
+        "Fee sharing dashboards",
+        "Real-time on-chain data",
+        "One-click AWS deploy"
+      ]
+    },
   },
   {
     name: "Crypto Tracking Platform",
