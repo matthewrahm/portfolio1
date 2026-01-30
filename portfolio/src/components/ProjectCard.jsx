@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export default function ProjectCard({ name, description, impact, highlights, tags, category, featured, index }) {
+export default function ProjectCard({ name, description, impact, highlights, tags, category, featured, link, index }) {
   return (
     <motion.div
       layout
@@ -39,8 +39,8 @@ export default function ProjectCard({ name, description, impact, highlights, tag
           </ul>
         )}
 
-        {/* Tags pushed to bottom */}
-        <div className="flex flex-wrap gap-2 mt-auto">
+        {/* Tags and link pushed to bottom */}
+        <div className="flex flex-wrap items-center gap-2 mt-auto">
           {tags.map((tag) => (
             <span
               key={tag}
@@ -49,6 +49,19 @@ export default function ProjectCard({ name, description, impact, highlights, tag
               {tag}
             </span>
           ))}
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-auto inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-[#10b981] hover:text-[#34d399] transition-colors"
+            >
+              Live Demo
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          )}
         </div>
       </div>
     </motion.div>

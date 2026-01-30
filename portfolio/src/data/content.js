@@ -80,6 +80,7 @@ export const projects = [
     tags: ["React", "Supabase", "Zustand", "Lightweight Charts", "WebSocket", "Binance API"],
     category: "Full Stack",
     featured: true,
+    link: "https://astonishing-tarsier-6feaee.netlify.app/auth",
     highlights: [
       "Paper trading engine with live portfolio P&L, position tracking, and what-if scenarios",
       "Real-time WebSocket price feeds with candlestick charts and RSI/MACD/Bollinger Band indicators",
