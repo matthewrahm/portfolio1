@@ -10,7 +10,7 @@ export default function BrowserMockup({ url, children }) {
         </div>
         {url && (
           <div className="flex-1 ml-2">
-            <div className="bg-[#0f0f17] rounded-md px-3 py-1 text-xs text-[#666] truncate max-w-[280px]">
+            <div className="surface-inset rounded-md px-3 py-1 text-xs text-[#666] truncate max-w-[280px]">
               {url}
             </div>
           </div>

@@ -24,12 +24,9 @@ export default function Footer() {
               href={contact.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#666666] hover:text-[#fafafa] transition-colors block"
+              className="p-2 btn-depth rounded-lg text-[#666666] hover:text-[#10b981] transition-colors block"
               title="GitHub"
-              whileHover={{
-                scale: 1.15,
-                filter: "drop-shadow(0 0 8px rgba(16, 185, 129, 0.5))"
-              }}
+              whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.2 }}
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -42,12 +39,9 @@ export default function Footer() {
               href={contact.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#666666] hover:text-[#fafafa] transition-colors block"
+              className="p-2 btn-depth rounded-lg text-[#666666] hover:text-[#10b981] transition-colors block"
               title="LinkedIn"
-              whileHover={{
-                scale: 1.15,
-                filter: "drop-shadow(0 0 8px rgba(16, 185, 129, 0.5))"
-              }}
+              whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.2 }}
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

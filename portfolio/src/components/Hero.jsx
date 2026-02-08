@@ -64,7 +64,7 @@ export default function Hero() {
             onClick={scrollToProjects}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            className="px-6 py-3 bg-[#10b981] hover:bg-[#0d9668] text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+            className="px-6 py-3 btn-depth-accent font-medium rounded-lg flex items-center gap-2"
           >
             View Projects
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,7 +75,7 @@ export default function Hero() {
             onClick={scrollToContact}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            className="px-6 py-3 border border-[#333] hover:border-[#10b981]/50 text-[#888888] hover:text-[#fafafa] font-medium rounded-lg transition-colors"
+            className="px-6 py-3 btn-depth text-[#888888] hover:text-[#fafafa] font-medium rounded-lg"
           >
             Get in touch
           </motion.button>
@@ -96,7 +96,7 @@ export default function Hero() {
               href={contact.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-[#666666] hover:text-[#10b981] transition-colors"
+              className="p-2.5 btn-depth rounded-lg text-[#666666] hover:text-[#10b981]"
               title="GitHub"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -107,7 +107,7 @@ export default function Hero() {
               href={contact.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-[#666666] hover:text-[#10b981] transition-colors"
+              className="p-2.5 btn-depth rounded-lg text-[#666666] hover:text-[#10b981]"
               title="LinkedIn"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -116,7 +116,7 @@ export default function Hero() {
             </a>
             <a
               href={`mailto:${contact.email}`}
-              className="p-2 text-[#666666] hover:text-[#10b981] transition-colors"
+              className="p-2.5 btn-depth rounded-lg text-[#666666] hover:text-[#10b981]"
               title="Email"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

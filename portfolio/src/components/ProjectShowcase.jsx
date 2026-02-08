@@ -52,9 +52,9 @@ export default function ProjectShowcase({ project, onClose }) {
               aria-modal="true"
               aria-label={`${project.name} showcase`}
               layoutId={reducedMotion ? undefined : `project-${project.name}`}
-              className="relative w-full max-w-6xl max-h-[90vh] overflow-y-auto rounded-2xl glass-card pointer-events-auto"
+              className="relative w-full max-w-6xl max-h-[90vh] overflow-y-auto rounded-2xl surface-elevated border border-[#2A2A34] pointer-events-auto"
               style={{
-                boxShadow: '0 0 60px rgba(16, 185, 129, 0.15), 0 0 120px rgba(16, 185, 129, 0.05)',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.5), 0 8px 16px -4px rgba(0,0,0,0.45), 0 20px 40px -8px rgba(0,0,0,0.3), 0 0 40px rgba(16,185,129,0.08), inset 0 1px 0 0 rgba(255,255,255,0.06)',
               }}
               initial={reducedMotion ? { opacity: 0 } : undefined}
               animate={reducedMotion ? { opacity: 1 } : undefined}
@@ -64,7 +64,7 @@ export default function ProjectShowcase({ project, onClose }) {
               {/* Close button */}
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full glass-card flex items-center justify-center text-[#888] hover:text-[#10b981] hover:border-[#10b981]/30 transition-colors"
+                className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full btn-depth flex items-center justify-center text-[#888] hover:text-[#10b981] transition-colors"
                 aria-label="Close showcase"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,7 +98,7 @@ export default function ProjectShowcase({ project, onClose }) {
                 >
                   <motion.div variants={staggerItem}>
                     {project.category && (
-                      <span className="inline-block px-3 py-1 text-xs font-medium text-[#10b981] bg-[#10b981]/10 border border-[#10b981]/20 rounded-full mb-3">
+                      <span className="inline-block px-3 py-1.5 text-xs font-medium text-[#10b981] bg-gradient-to-b from-[#142E24] to-[#0F2319] border border-[#10b981]/20 rounded-full mb-3 pill-raised">
                         {project.category}
                       </span>
                     )}
@@ -143,7 +143,7 @@ export default function ProjectShowcase({ project, onClose }) {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-[#0a0a0f] bg-[#10b981] hover:bg-[#34d399] rounded-lg transition-colors"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium btn-depth-accent rounded-lg"
                       >
                         View Live
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

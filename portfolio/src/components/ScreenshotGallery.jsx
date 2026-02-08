@@ -84,7 +84,7 @@ const ScreenshotGallery = forwardRef(function ScreenshotGallery({ screenshots, r
             <button
               onClick={() => paginate(-1)}
               disabled={currentIndex === 0}
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full glass-card flex items-center justify-center text-[#888] hover:text-[#10b981] hover:border-[#10b981]/30 transition-colors disabled:opacity-30 disabled:cursor-not-allowed z-10"
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full btn-depth flex items-center justify-center text-[#888] hover:text-[#10b981] transition-colors disabled:opacity-30 disabled:cursor-not-allowed z-10"
               aria-label="Previous screenshot"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,7 +94,7 @@ const ScreenshotGallery = forwardRef(function ScreenshotGallery({ screenshots, r
             <button
               onClick={() => paginate(1)}
               disabled={currentIndex === screenshots.length - 1}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full glass-card flex items-center justify-center text-[#888] hover:text-[#10b981] hover:border-[#10b981]/30 transition-colors disabled:opacity-30 disabled:cursor-not-allowed z-10"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full btn-depth flex items-center justify-center text-[#888] hover:text-[#10b981] transition-colors disabled:opacity-30 disabled:cursor-not-allowed z-10"
               aria-label="Next screenshot"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -26,7 +26,7 @@ export default function ProjectCard({ name, description, impact, highlights, tag
       {/* Expand icon for showcase cards */}
       {hasShowcase && (
         <div className="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-          <div className="w-7 h-7 rounded-md glass-card flex items-center justify-center text-[#888] group-hover:text-[#10b981]">
+          <div className="w-7 h-7 rounded-md btn-depth flex items-center justify-center text-[#888] group-hover:text-[#10b981]">
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
             </svg>
@@ -40,7 +40,7 @@ export default function ProjectCard({ name, description, impact, highlights, tag
       >
         {/* Category badge */}
         {category && (
-          <span className="inline-block px-3 py-1 text-xs font-medium text-[#10b981] bg-[#10b981]/10 border border-[#10b981]/20 rounded-full mb-4">
+          <span className="inline-block px-3 py-1.5 text-xs font-medium text-[#10b981] bg-gradient-to-b from-[#142E24] to-[#0F2319] border border-[#10b981]/20 rounded-full mb-4 pill-raised">
             {category}
           </span>
         )}
@@ -79,7 +79,7 @@ export default function ProjectCard({ name, description, impact, highlights, tag
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="ml-auto inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-[#10b981] hover:text-[#34d399] transition-colors"
+              className="ml-auto inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#10b981] btn-depth-accent-soft rounded-full"
             >
               Live Demo
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

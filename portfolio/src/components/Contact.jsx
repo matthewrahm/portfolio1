@@ -41,7 +41,7 @@ export default function Contact() {
               </a>
               <button
                 onClick={copyEmail}
-                className="p-2 text-[#666666] hover:text-[#fafafa] transition-colors"
+                className="p-2 btn-depth rounded-lg text-[#666666] hover:text-[#fafafa]"
                 title="Copy email"
               >
                 {copied ? (
@@ -64,12 +64,9 @@ export default function Contact() {
                   href={contact.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{
-                    scale: 1.1,
-                    filter: "drop-shadow(0 0 8px rgba(16, 185, 129, 0.5))"
-                  }}
+                  whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="p-3 text-[#888888] hover:text-[#fafafa] transition-colors block"
+                  className="p-3 btn-depth rounded-xl text-[#888888] hover:text-[#10b981] transition-colors block"
                   title="GitHub"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -82,12 +79,9 @@ export default function Contact() {
                   href={contact.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{
-                    scale: 1.1,
-                    filter: "drop-shadow(0 0 8px rgba(16, 185, 129, 0.5))"
-                  }}
+                  whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="p-3 text-[#888888] hover:text-[#fafafa] transition-colors block"
+                  className="p-3 btn-depth rounded-xl text-[#888888] hover:text-[#10b981] transition-colors block"
                   title="LinkedIn"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

@@ -82,7 +82,7 @@ export default function Navbar() {
                   e.preventDefault();
                   document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="px-4 py-2 bg-[#10b981] hover:bg-[#0d9668] text-white text-sm font-medium rounded-lg transition-colors"
+                className="px-4 py-2 btn-depth-accent text-sm font-medium rounded-lg"
               >
                 Hire Me
               </a>
@@ -147,7 +147,7 @@ export default function Navbar() {
                     document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
                     setIsMobileMenuOpen(false);
                   }}
-                  className="px-4 py-2 bg-[#10b981] hover:bg-[#0d9668] text-white text-sm font-medium rounded-lg transition-colors w-fit"
+                  className="px-4 py-2 btn-depth-accent text-sm font-medium rounded-lg w-fit"
                 >
                   Hire Me
                 </a>
